@@ -1,3 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+body {
+    background: #161617;
+    color: #86868B;
+    font-family: "Montserrat", serif;
+}
+
+.active {
+    color: white;
+}
+
+.navlinks>.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #2997FF;
+    transition: all 0.3s;
+    opacity: 0;
+    transform-origin: left;
+}
+
+.navlinks>.active::after {
+    opacity: 1;
+}
+
+.box {
+    height: calc(100vh - 98.6667px);
+    padding: 16px 80px;
+}
+
+.btn {
+    padding: 8px 16px;
+}
+
+.scrollBarHide::-webkit-scrollbar {
+    display: none;
+    /* Hides the scrollbar */
+}
+
+.modal,
+.modalOverlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+}
+
+.modalOverlay {
+    background: rgba(49, 49, 49, .8);
+}
